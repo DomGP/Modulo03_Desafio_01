@@ -6,10 +6,10 @@ precioSpan.innerHTML = precio;
 
 //Botón Suma
 function botonSuma(){
-    var valorSuma = document.querySelector('.valor-total');
-    var sumaTotal = Number(valorSuma.innerHTML);
-    sumaTotal = sumaTotal+400000;
-    valorSuma.innerHTML=sumaTotal
+    var valorTotal = document.querySelector('.valor-total');
+    var sumaTotal = Number(valorTotal.innerHTML);
+    sumaTotal = sumaTotal+precio;
+    valorTotal.innerHTML=sumaTotal
 
     var valorCantidad = document.querySelector('.cantidad');
     var cantidadPositiva = Number(valorCantidad.innerHTML);
@@ -19,13 +19,15 @@ function botonSuma(){
 
 //Botón Resta
 function botonResta(){
-    var valorResta = document.querySelector('.valor-total');
-    var restaTotal = Number(valorResta.innerHTML);
-    restaTotal = restaTotal-400000;
-    valorResta.innerHTML=restaTotal;
+    var valorTotal = document.querySelector('.valor-total');
+    var restaTotal = Number(valorTotal.innerHTML);
+    restaTotal = restaTotal-precio;
+    restaTotal = Math.max(0,restaTotal)
+    valorTotal.innerHTML=restaTotal;
 
     var valorCantidad = document.querySelector('.cantidad');
     var cantidadNegativa = Number(valorCantidad.innerHTML);
     cantidadNegativa = cantidadNegativa-1;
+    cantidadNegativa = Math.max(0,cantidadNegativa)
     valorCantidad.innerHTML=cantidadNegativa;
 }
