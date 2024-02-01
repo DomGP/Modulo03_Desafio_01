@@ -6,15 +6,15 @@ precioSpan.innerHTML = precio;
 
 //Botón Suma
 function botonSuma(){
-    let valorTotal = document.querySelector('.valor-total');
-    let sumaTotal = Number(valorTotal.innerHTML);
-    sumaTotal = sumaTotal+precio;
-    valorTotal.innerHTML=sumaTotal
+    let valorTotal = document.querySelector('.valor-total'); //Se declara una variable cuyo valor es la busqueda de etiqueta que contiene dicha class
+    let sumaTotal = Number(valorTotal.innerHTML); //Declaro variable cuyo valor, transformando un string en número
+    sumaTotal = sumaTotal+precio; //Genera la operación de suma de valores
+    valorTotal.innerHTML=sumaTotal //Se establece el nuevo valor en la variable sumaTotal
 
-    let valorCantidad = document.querySelector('.cantidad');
-    let cantidadPositiva = Number(valorCantidad.innerHTML);
-    cantidadPositiva = cantidadPositiva+1;
-    valorCantidad.innerHTML=cantidadPositiva
+    let valorCantidad = document.querySelector('.cantidad'); //Se declara varibale para encontrar elemento usando la class cantidad
+    let cantidadPositiva = Number(valorCantidad.innerHTML); //Se declara variable para transformar el valor en número
+    cantidadPositiva = cantidadPositiva+1; //Genera la operación de suma
+    valorCantidad.innerHTML=cantidadPositiva //Se establece el nuevo valor en la variable cantidadPositiva
 }
 
 //Botón Resta
